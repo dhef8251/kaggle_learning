@@ -308,7 +308,7 @@ plt.show()
 ```
 
 
-![png](output_10_0.png)
+![png](image/output_10_0.png)
 
 
 
@@ -323,15 +323,15 @@ for col in explore.columns.drop('Survived'):
 ```
 
 
-![png](output_11_0.png)
+![png](image/output_11_0.png)
 
 
 
-![png](output_11_1.png)
+![png](image/output_11_1.png)
 
 
 
-![png](output_11_2.png)
+![png](image/output_11_2.png)
 
 
 The `SibSp` column shows the number of siblings and/or spouses each passengeer had on board, while the `Parch` columns shows the number of parents or children each passenger had onboard. Neither column has any missing values.
@@ -1251,6 +1251,6 @@ Image("submission_results/submission_190925.png")
 
 
 
-![png](output_22_0.png)
+![png](image/output_22_0.png)
 
 
