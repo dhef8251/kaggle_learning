@@ -1,0 +1,84 @@
+
+**A Data Science Framework**
+1. **Define the Problem:** If data science, big data, machine learning, predictive analytics, business intelligence, or any other buzzword is the solution, then what is the problem? As the saying goes, don't put the cart before the horse. Problems before requirements, requirements before solutions, solutions before design, and design before technology. Too often we are quick to jump on the new shiny technology, tool, or algorithm before determining the actual problem we are trying to solve.
+2. **Gather the Data:** John Naisbitt wrote in his 1984 book Megatrends, we are "drowning in data, yet staving for knowledge." So, chances are, the dataset already exist somewhere, in some format. It may be external or internal, structured or unstructured, static or streamed, objective or subjective, etc. As the saying goes, you don't have to reinvent the wheel, you just have to know where to find it. In the next step, we will worry about transforming "dirty data" to "clean data."
+3. **Prepare Data for Consumption:** This step is often referred to as data wrangling, a required process to turn "wild" data into "manageable" data. Data wrangling includes implementing data architectures for storage and processing, developing data governance standards for quality and control, data extraction (i.e. ETL and web scraping), and data cleaning to identify aberrant, missing, or outlier data points.
+4. **Perform Exploratory Analysis:** Anybody who has ever worked with data knows, garbage-in, garbage-out (GIGO). Therefore, it is important to deploy descriptive and graphical statistics to look for potential problems, patterns, classifications, correlations and comparisons in the dataset. In addition, data categorization (i.e. qualitative vs quantitative) is also important to understand and select the correct hypothesis test or data model.
+5. **Model Data:** Like descriptive and inferential statistics, data modeling can either summarize the data or predict future outcomes. Your dataset and expected results, will determine the algorithms available for use. It's important to remember, algorithms are tools and not magical wnads or silver bullets. You must still be the master craft (wo)man that knows how-to select the right tool for the job. An analogy would be asking someone to hand you a Philip screwdriver, and they hand you a flathead screwdriver or worst a hammer. At best, it shows a complete lack of understandiing. At worst, it makes completing the project impossible. The same is true in data modeling. The wrong model can lead to poor performance at best and the wrong conclusion (that's used as actionable intelligence) at worst.
+6. **Validate and Implement Data Model:** After you've trained your model based on a subset of your data, it's time to test your model. This helps ensure you haven't overfit your model or made it so specific to the selected subset, that it does not accurately fit another subset from the same dataset. In this step we determine if our model overfit, generalize, or underfit out dataset.
+7. **Optimize and Strategize:** This is the "bionic man" step, where you iterate back through the process to make it better...stronger...faster than it was before. As a data scientist, your strategy should be to outsource developer operations and application plumbing, so you have more time to focus on recommendations and design. Once you're able to package your ideas, this becomes your "currency exchange" rate.
+
+<h1>Table of Contents<span class="tocSkip"></span></h1>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Step-1:-Define-the-Problem" data-toc-modified-id="Step-1:-Define-the-Problem-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Step 1: Define the Problem</a></span></li><li><span><a href="#Step-2:-Gather-the-Data" data-toc-modified-id="Step-2:-Gather-the-Data-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Step 2: Gather the Data</a></span></li><li><span><a href="#Step-3:-Prepare-Data-for-Consumption" data-toc-modified-id="Step-3:-Prepare-Data-for-Consumption-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Step 3: Prepare Data for Consumption</a></span><ul class="toc-item"><li><span><a href="#3.1-Import-Libraries" data-toc-modified-id="3.1-Import-Libraries-3.1"><span class="toc-item-num">3.1&nbsp;&nbsp;</span>3.1 Import Libraries</a></span></li></ul></li></ul></div>
+
+# Step 1: Define the Problem
+
+For this project, the problem statement is given to us on a golden plater, develop an algorithm to predict the survival outcome of passengers on the Titanic.
+
+---
+**Project Summary:** The sinking of the RMS Titanic is one of the most infamous shipwrecks in history. On April 15, 1912, during heer maiden voyage, the Titanic sank after colliding with an iceberg, killing 1502 out of 2224 passengers and crew. This sensational tragedy shocked the international community and led to better safety regulations for ships.
+
+One of the reasons that the shipwreck led to such loss of life was that there were not enough lifeboats for the passengeres and crew. Although there was some element of luck involved in surviving the sinking, some groups of people were more likely to survive than others, such as women, children, and the upper-class.
+
+In this challenge, we ask you to complete the analysis of what sorts of people were likely to survive. In particular, we ask you to apply to tools of machine learning to predict which passengers survived the tragedy.
+
+# Step 2: Gather the Data
+
+The dataseet is also given to us on a golden plater with test and train data at `Kaggle's Titanic: Machine Learning from Disaster`
+
+# Step 3: Prepare Data for Consumption
+
+Since step 2 was provided to us on a golden plater, so is step 3. Therefore, normal processes in data wranling, such as data architecture, governance, and extraction are out of scope. This, only data cleaning is in scope.
+
+## 3.1 Import Libraries
+
+The following code is written in Python 3.x. Libraries provide pre-written functionality to perform necessary tasks. The idea is why write ten lines of code, when you can write one line.
+
+
+```python
+# This Python 3 environment comes with many helpful analytics libraries installed
+
+# load packages
+import sys # access to system parameters 
+print('Python version: {}'.format(sys.version))
+
+import pandas as pd # collection of functions for data processing and analysis modeled after R dataframes with SQL like features
+print('pandas version: {}'.format(pd.__version__))
+
+import matplotlib # collection of functions for scientific and publication-ready visualization
+print('matplotlib version: {}'.format(matplotlib.__version__))
+
+import numpy as np # foundational package for scientific computing
+print('NumPy version: {}'.format(np.__version__))
+
+import scipy as sp # collection of functions for scientific computing and advance mathematics
+print('SciPy version: {}'.format(sp.__version__))
+
+import IPython
+from IPython import display # pretty printing of dataframes in Jupyter notebook
+print('IPython version: {}'.format(IPython.__version__))
+
+import sklearn
+print('scikit-learn version: {}'.format(sklearn.__version__))
+
+# misc libraries
+import random
+import time
+
+# ignore warnings
+import warnings
+warnings.filterwarnings('ignore')
+print('-'*25)
+
+
+```
+
+    Python version: 3.7.3 (default, Apr 24 2019, 15:29:51) [MSC v.1915 64 bit (AMD64)]
+    pandas version: 0.24.2
+    matplotlib version: 3.1.0
+    NumPy version: 1.16.4
+    SciPy version: 1.2.1
+    IPython version: 7.6.1
+    scikit-learn version: 0.21.2
+    -------------------------
+    
